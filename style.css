@@ -1,0 +1,80 @@
+div, span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+div {transform: rotate(calc(var(--i) 60deg));   }
+span {
+  background: radial-gradient(circle, hsl(143, 100%, 56%), hsl(203, 100%, 56%));
+  --clip-path: polygon(50%, 49.9%, 79.5%, 100%, 20.5%, 100%);
+ -webkit-clip-path: var(--clip-path);
+  clip-path: var(--clip-path);
+  transform-origin: 20% 80%;
+  animation: open 6000ms infinite alternate ease-in-out;
+}
+@keyframes open {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes gear {
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+main {
+  position; relative;
+  margin: auto;
+  width: 80vmin;
+   height: 80vmin;
+  overflow: hidden;
+  border: 5vmin double hsl(253, 100%, 20%);
+  border-radius: 50%;
+  background: radial-gradient(circle,
+  hsl(253, 100%, 56%) 0%
+  hsla(263,100%, 46%, 0) 80%);
+  background: url(untitled-1.gif) no-repeat;
+  background-clip: content-box;
+   background-size: cover;
+   background-positon: center;
+   background-size: 400px 300px;
+  animation: gear 6000ms infinite alternate ease-in-out;
+}
+body {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background: radial-gradient(circle,
+  hsl(243, 100%, 16%),
+  hsl(243, 100%, 6%));
+}
+* {
+  margin: 0;
+  border-sizing: border-box;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: red;
+ 
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: red;
+
+}
